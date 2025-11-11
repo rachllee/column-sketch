@@ -27,6 +27,11 @@ target_link_libraries(smoke PRIVATE csketch)
 add_executable(build_sketch apps/build_sketch.cpp)
 target_link_libraries(build_sketch PRIVATE csketch)
 
+# run_query app
+add_executable(run_query apps/run_query.cpp)
+target_link_libraries(run_query PRIVATE csketch)
+
+
 # Release defaults
 if (NOT CMAKE_BUILD_TYPE)
 set(CMAKE_BUILD_TYPE Release CACHE STRING "Build type" FORCE)
