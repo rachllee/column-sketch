@@ -51,7 +51,7 @@ public:
         ++j;
       }
       size_t freq = j - i;
-      if (freq <= unique_cutoff) {
+      if (freq >= unique_cutoff) {
         uniques.push_back(sorted[i]);
       } else {
         nonuniq_runs.push_back({sorted[i], freq});
@@ -160,7 +160,7 @@ public:
     auto uit = std::lower_bound(U.begin(), U.end(), v);
     if (uit != U.end() && *uit == v) {
       uint32_t idx = static_cast<uint32_t>(uit - U.begin());
-      return {idx, true};
+      return {idx, false};
     }
 
     if (E.empty()) {

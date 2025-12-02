@@ -31,6 +31,10 @@ target_link_libraries(build_sketch PRIVATE csketch)
 add_executable(run_query apps/run_query.cpp)
 target_link_libraries(run_query PRIVATE csketch)
 
+add_executable(benchmark apps/benchmark.cpp)
+target_link_libraries(benchmark PRIVATE csketch)
+
+
 
 # Release defaults
 if (NOT CMAKE_BUILD_TYPE)

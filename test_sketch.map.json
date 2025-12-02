@@ -1,7 +1,0 @@
-{
- "dtype": "u32",
- "code_bits": 8,
- "total_codes": 10,
- "uniques": [1,2,3,4,5,6,7,8,9,10],
- "endpoints": []
-}
